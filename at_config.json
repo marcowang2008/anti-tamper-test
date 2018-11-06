@@ -1,0 +1,32 @@
+[
+    {
+        "name": "location1",
+        "useAlternate": false,
+        "monitored": {
+            "password": "password1",
+            "websiteFolder": "/",
+            "username": "user1",
+            "host": "1.1.1.1",
+            "port": 22,
+            "protocol": 0
+        },
+        "filter": [
+            {
+                "Regex": false,
+                "Filter": "*.txt"
+            }
+        ],
+        "interval": 600,
+        "mode": 0,
+        "lastUpdate": "",
+        "heartbeat": 30,
+        "alternate": {
+            "password": "password2",
+            "websiteFolder": "/",
+            "username": "user2",
+            "host": "1.1.1.2",
+            "port": 22,
+            "protocol": 0
+        }
+    }
+]

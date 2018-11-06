@@ -1,0 +1,7 @@
+-------Install
+npm install apidoc -g
+
+-------Run
+apidoc -i ./handlers -o ./doc/
+
+
