@@ -1,5 +1,5 @@
 from db_manager._BaseDBManager import BaseDBManager
-from db_manager.sqlite.modules import FileEvent
+from db_manager.sqlite.models import FileEvent
 
 class SQLiteDBManager(BaseDBManager):
     def __init__(self, db):

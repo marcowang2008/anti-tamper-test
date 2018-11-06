@@ -14,7 +14,7 @@ from handlers.IndexHandler import IndexHandler
 from tornado.options import define
 
 from db_manager.sqlite.SQLiteDBManager import SQLiteDBManager
-from db_manager.sqlite.modules import init_db
+from db_manager.sqlite.models import init_db
 
 
 def getHandlers(app):
