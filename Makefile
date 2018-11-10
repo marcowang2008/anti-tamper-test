@@ -32,9 +32,10 @@ clear_py_exe:
 
 
 clear_rpm:
+	rm -rf rpm
 	rm -rf ~/rpmbuild
 
 
-clear_all:
+clear:
 	make clear_rpm
 	make clear_py_exe
