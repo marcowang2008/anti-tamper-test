@@ -1,0 +1,53 @@
+---> Setup dev environment
+It is recommended to setup a virtualenv for this project dev since we are going to
+do package all 3rd party packages from virtualenv.
+I assume you have python3.6 installed your dev box and pip is for python3.6.
+
+cd to project root and follow steps below to setup dev environment:
+
+# 1) install virtualenv
+pip install virtualenv
+
+# 2) create virtualenv named venv
+virtualenv --no-site-packages venv
+
+# 3) enable virtualenv
+source venv/bin/activate
+
+# 4) install dependency
+pip install -r requirements.txt
+
+# 5) run AT project
+python zyWAF_AT_api.py -port=8801 -debug=True
+
+
+
+---> Make pyinstaller
+We use pyinstaller to create python distribute.
+pyinstaller is installed via requirements.txt file during 'setup dev environment' section.
+
+# 1) enable virtualenv
+source venv/bin/activate
+
+# 2) do package
+make py_exe
+
+
+
+---> Make RPM package
+# 1) install rpm tools
+yum install -y rpmdevtools rpmlint
+
+# 2) build rpm package
+make rpm_package
+
+
+
+---> Create API doc
+# 1) I assume you have nodejs and npm installed. Now install apidoc
+npm install apidoc -g
+
+# 2) create API doc
+apidoc -i ./handlers -o ./doc/
+
+

@@ -52,7 +52,8 @@ class Server():
         }
         app = tornado.web.Application(handlers=self.handlers, **settings)
 
-        db_path = os.path.dirname(os.path.abspath(__file__)) + '/data/at.db'
+        #db_path = os.path.dirname(os.path.abspath(__file__)) + '/data/at.db'
+        db_path = './data/at.db'
         sqlite_db = init_db(db_path)
         self.db_mgr = SQLiteDBManager(sqlite_db)
         self.log.info("db location: %s" % db_path)

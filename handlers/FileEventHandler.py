@@ -103,9 +103,3 @@ class FileEventHandler(BaseHandler):
             err = self.handle_db_error_msg(e)
             retval = self.format_api_return(error=err)
             self.write(retval)
-
-
-    @tornado.gen.coroutine
-    def delete(self, id=None):
-        self.db.test()
-

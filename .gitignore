@@ -1,0 +1,16 @@
+# doc folder
+doc
+
+# virtual env folder
+venv
+
+# mac specified files
+requirements_mac.txt
+
+#pyinstaller generated files and folder
+zyWAF_AT_api.spec
+
+# db file
+*.db
+
+
